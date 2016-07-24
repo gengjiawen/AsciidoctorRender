@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Asciidoctor in JavaScript powered by Opal</title>
+
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css"/>
 </head>
 <body>
     <!--<div id="content"></div>-->
@@ -16,19 +18,37 @@
     <script src="bower_components/react/react.js"></script>
     <script src="bower_components/react/react-dom.js"></script>
     <script src="bower_components/babel/browser.min.js"></script>
-    <script src="bower_components/remarkable/dist/remarkable.min.js"></script>
+
+    <script src="bower_components/highlightjs/highlight.pack.min.js"></script>
 
     <script type="text/babel">
         var AsciidoctorEditor = React.createClass({
           getInitialState: function() {
-            return {value: 'Type some *asciidoctor* here!'};
+//            return {value: 'Type some *asciidoctor* here!'};
+            return {value: `= Title
+
+pls, **Hi**
+[source, python]
+----
+import os
+print("hello world")
+----
+`};
           },
           handleChange: function() {
             this.setState({value: this.refs.textarea.value});
           },
+          componentDidMount: function(){
+            hljs.initHighlighting();
+          },
           rawMarkup: function() {
-            var options = Opal.hash({doctype: 'inline', attributes: ['showtitle']});
-            return { __html: Opal.Asciidoctor.$convert(this.state.value, options) };
+            var attrs = Opal.hash({'linkcss': '', 'copycss!': '', 'showtitle': true});
+            var options = Opal.hash({'doctype': 'article', 'safe': 'safe', 'header_footer': false, 'attributes': attrs,});
+
+            var doc = Opal.Asciidoctor.$load(this.state.value, options);
+            doc.$set_attribute('source-highlighter', 'highlight.js');
+
+            return { __html: doc.$convert() };
           },
           render: function() {
             return (
@@ -50,6 +70,7 @@
 
         ReactDOM.render(<AsciidoctorEditor />, document.getElementById('asciidoctor'));
     </script>
+
 
 </body>
 </html>

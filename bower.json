@@ -1,5 +1,5 @@
 {
-  "name": "Hello",
+  "name": "Asciidoctor Render",
   "authors": [
     "gengjiawen <technicalcute@gmail.com>"
   ],
@@ -19,6 +19,7 @@
     "asciidoctor.js": "^1.5.4",
     "jquery": "^3.1.0",
     "react": "^15.2.1",
-    "babel": "^5.8.38"
+    "babel": "^5.8.38",
+    "highlightjs": "^9.5.0"
   }
 }
