@@ -1,1 +1,7 @@
 This is a rendering app for online render asciidoctor to html
+
+== Dependents
+* asciidoctor.js
+* React
+* highlight.js
+* babel
