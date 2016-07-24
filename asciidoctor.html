@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asciidoctor in JavaScript powered by Opal</title>
+</head>
+<body>
+    <!--<div id="content"></div>-->
+    <div id="asciidoctor"></div>
+    <!--<div id="AsciidoctorEditor"></div>-->
+    <script src="bower_components/asciidoctor.js/dist/asciidoctor-all.min.js"></script>
+    <!-- If you need docbook backends -->
+    <script src="bower_components/asciidoctor.js/dist/asciidoctor-docbook.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="bower_components/react/react.js"></script>
+    <script src="bower_components/react/react-dom.js"></script>
+    <script src="bower_components/babel/browser.min.js"></script>
+    <script src="bower_components/remarkable/dist/remarkable.min.js"></script>
+
+    <script type="text/babel">
+        var AsciidoctorEditor = React.createClass({
+          getInitialState: function() {
+            return {value: 'Type some *asciidoctor* here!'};
+          },
+          handleChange: function() {
+            this.setState({value: this.refs.textarea.value});
+          },
+          rawMarkup: function() {
+            var options = Opal.hash({doctype: 'inline', attributes: ['showtitle']});
+            return { __html: Opal.Asciidoctor.$convert(this.state.value, options) };
+          },
+          render: function() {
+            return (
+              <div className="AsciidoctorEditor">
+                <h3>Input</h3>
+                <textarea
+                  onChange={this.handleChange}
+                  ref="textarea"
+                  defaultValue={this.state.value} />
+                <h3>Output</h3>
+                <div
+                  className="content"
+                  dangerouslySetInnerHTML={this.rawMarkup()}
+                />
+              </div>
+            );
+          }
+        });
+
+        ReactDOM.render(<AsciidoctorEditor />, document.getElementById('asciidoctor'));
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "Hello",
+  "authors": [
+    "gengjiawen <technicalcute@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "asciidoctor.js": "^1.5.4",
+    "jquery": "^3.1.0",
+    "react": "^15.2.1",
+    "babel": "^5.8.38"
+  }
+}
