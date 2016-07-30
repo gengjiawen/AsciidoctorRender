@@ -12,10 +12,25 @@ print("hello world")
 `};
   },
   handleChange: function() {
+    console.log("handle change")
     this.setState({value: this.refs.textarea.value});
   },
   componentDidMount: function(){
-    hljs.initHighlighting();
+    console.log("componentDidMount")
+    this.highlightCode();
+  },
+  componentDidUpdate: function () {
+    console.log("componentDidUpdate")
+    this.highlightCode();
+  },
+  highlightCode: function () {
+    var domNode = ReactDOM.findDOMNode(this);
+    var nodes = domNode.querySelectorAll('pre code');
+    if (nodes.length > 0) {
+      for (var i = 0; i < nodes.length; i = i + 1) {
+        hljs.highlightBlock(nodes[i]);
+      }
+    }
   },
   rawMarkup: function() {
     var attrs = Opal.hash({'linkcss': '', 'copycss!': '', 'showtitle': true});
@@ -28,15 +43,18 @@ print("hello world")
   },
   render: function() {
     return (
-      <div className="AsciidoctorEditor">
+      <div className="container" classID="AsciidoctorEditor">
         <h3>Input</h3>
-        <textarea
-          onChange={this.handleChange}
-          ref="textarea"
-          defaultValue={this.state.value}/>
+        <div className="flex-item">
+          <textarea
+            onChange={this.handleChange}
+            ref="textarea"
+            defaultValue={this.state.value}/>
+        </div>
+
         <h3>Output</h3>
         <div
-          className="content"
+          className="content flex-item"
           dangerouslySetInnerHTML={this.rawMarkup()}
         />
       </div>
@@ -44,4 +62,4 @@ print("hello world")
   }
 });
 
-ReactDOM.render(<AsciidoctorEditor />, document.getElementById('asciidoctor'));
+ReactDOM.render(<AsciidoctorEditor />, document.getElementById('container'));

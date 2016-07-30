@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Asciidoctor in JavaScript powered by Opal</title>
+    <style>
+        .container {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+        }
+        .flex-item {
+
+        }
+    </style>
 
     <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css"/>
 </head>
 <body>
-    <!--<div id="content"></div>-->
-    <div id="asciidoctor"></div>
-    <!--<div id="AsciidoctorEditor"></div>-->
+    <div id="container">
+    </div>
+
     <script src="bower_components/asciidoctor.js/dist/asciidoctor-all.min.js"></script>
     <!-- If you need docbook backends -->
     <script src="bower_components/asciidoctor.js/dist/asciidoctor-docbook.min.js"></script>
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <script src="bower_components/react/react.js"></script>
@@ -22,7 +33,7 @@
     <script src="bower_components/highlightjs/highlight.pack.min.js"></script>
 
     <script type="text/babel" src="render.js"></script>
-
+    <!--<script>hljs.initHighlighting()</script>-->
 
 </body>
 </html>
