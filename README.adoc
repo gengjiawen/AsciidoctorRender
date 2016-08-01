@@ -5,3 +5,9 @@ This is a rendering app for online render asciidoctor to html
 * React
 * highlight.js
 * babel
+
+
+== Todo
+* Move style inside React Component
+* add download button
+* add other common operation, like Bold and italic
