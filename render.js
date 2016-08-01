@@ -1,13 +1,29 @@
 var AsciidoctorEditor = React.createClass({
   getInitialState: function() {
 //            return {value: 'Type some *asciidoctor* here!'};
-    return {value: `= Title
+    return {value: `
+= Title
+:toc:
+:sectnums:
+:sectnumlevels: 2
+
+== Python
 
 pls, **Hi**
 [source, python]
 ----
 import os
 print("hello world")
+----
+
+== Gradle
+[source, gradle]
+----
+task wrapper(type: Wrapper) {
+    group "wrapper"
+    gradleVersion = '2.14'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
 ----
 `};
   },
@@ -44,19 +60,20 @@ print("hello world")
   render: function() {
     return (
       <div className="container" classID="AsciidoctorEditor">
-        <h3>Input</h3>
         <div className="flex-item">
+          <h3>Input</h3>
           <textarea
             onChange={this.handleChange}
             ref="textarea"
+            height={"auto"}
             defaultValue={this.state.value}/>
         </div>
 
-        <h3>Output</h3>
-        <div
-          className="content flex-item"
-          dangerouslySetInnerHTML={this.rawMarkup()}
-        />
+        <div className="flex-item" >
+          <h3>Output</h3>
+          <div className="content" dangerouslySetInnerHTML={this.rawMarkup()}>
+          </div>
+        </div>
       </div>
     );
   }
