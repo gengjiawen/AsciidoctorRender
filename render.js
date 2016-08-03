@@ -63,9 +63,9 @@ task wrapper(type: Wrapper) {
         <div className="flex-item">
           <h3>Input</h3>
           <textarea
+            className="input"
             onChange={this.handleChange}
             ref="textarea"
-            height={"auto"}
             defaultValue={this.state.value}/>
         </div>
 

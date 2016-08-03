@@ -9,9 +9,15 @@
             flex-flow: row;
             justify-content: space-around;
         }
-        .flex-item {
-            width: 100%
 
+        .flex-item {
+            display: flex;
+            flex-flow: column;
+            width: 100%
+        }
+
+        .input {
+            flex: 1;
         }
     </style>
 
@@ -34,7 +40,6 @@
     <script src="bower_components/highlightjs/highlight.pack.min.js"></script>
 
     <script type="text/babel" src="render.js"></script>
-    <!--<script>hljs.initHighlighting()</script>-->
 
 </body>
 </html>
