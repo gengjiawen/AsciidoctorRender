@@ -1,5 +1,11 @@
 This is a rendering app for online render asciidoctor to html
 
+== How to play
+[source]
+bower init
+
+open asciidoctor.html in browser
+
 == Dependents
 * asciidoctor.js
 * React
