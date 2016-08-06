@@ -1,4 +1,12 @@
-This is a rendering app for online render asciidoctor to html
+= Acsiidoctor Render
+Geng Jiawen
+techinicalcute@Gmail.com
+:toc:
+:toclevels: 3
+:sectnums:
+:sectnumlevels: 2
+:source-highlighter: hightlightjs
+This is a rendering app for realtime render asciidoctor to html
 
 == How to play
 [source]
@@ -6,14 +14,16 @@ bower init
 
 open asciidoctor.html in browser
 
-== Dependents
+== Dependencies
 * asciidoctor.js
 * React
 * highlight.js
 * babel
 
-
 == Todo
 * Move style inside React Component
 * add download button
 * add other common operation, like Bold and italic
+
+== License
+MIT
