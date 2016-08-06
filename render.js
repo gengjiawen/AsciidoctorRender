@@ -32,12 +32,17 @@ task wrapper(type: Wrapper) {
     this.setState({value: this.refs.textarea.value});
   },
   componentDidMount: function(){
-    console.log("componentDidMount")
+    console.log("componentDidMount");
     this.highlightCode();
   },
   componentDidUpdate: function () {
-    console.log("componentDidUpdate")
+    console.log("componentDidUpdate");
     this.highlightCode();
+  },
+  saveToFile: function () {
+    console.log("save to file");
+    var html = ReactDOM.findDOMNode(this.refs.content).innerHTML;
+    console.log(html)
   },
   highlightCode: function () {
     var domNode = ReactDOM.findDOMNode(this);
@@ -61,6 +66,7 @@ task wrapper(type: Wrapper) {
     return (
       <div className="container" classID="AsciidoctorEditor">
         <div className="flex-item">
+          <a href="http://asciidoctor.org/docs/user-manual/" target="_blank">Asciidoctor User Manual</a>
           <h3>Input</h3>
           <textarea
             className="input"
@@ -71,7 +77,13 @@ task wrapper(type: Wrapper) {
 
         <div className="flex-item" >
           <h3>Output</h3>
-          <div className="content" dangerouslySetInnerHTML={this.rawMarkup()}>
+          {/*<input*/}
+            {/*type="button"*/}
+            {/*value="Save"*/}
+            {/*onClick={this.saveToFile} />*/}
+          <div
+            ref="content"
+            classID="content" dangerouslySetInnerHTML={this.rawMarkup()}>
           </div>
         </div>
       </div>
