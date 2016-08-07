@@ -6,6 +6,7 @@ techinicalcute@Gmail.com
 :sectnums:
 :sectnumlevels: 2
 :source-highlighter: hightlightjs
+
 This is a rendering app for realtime render asciidoctor to html
 
 == How to play
@@ -21,7 +22,6 @@ open asciidoctor.html in browser
 * babel
 
 == Todo
-* Move style inside React Component
 * add download button
 * add other common operation, like Bold and italic
 

@@ -63,19 +63,37 @@ task wrapper(type: Wrapper) {
     return { __html: doc.$convert() };
   },
   render: function() {
+    var containerStyle = {
+      display: 'flex',
+      flexFlow : 'row',
+      justifyContent : 'space-around',
+    } ;
+
+    var flexItemStyle = {
+      display: 'flex',
+      flexFlow : 'column',
+      width : '100%',
+    };
+
+    var inputStyle = {
+      flex: 1,
+      width: '98%',
+    };
+
     return (
-      <div className="container" classID="AsciidoctorEditor">
-        <div className="flex-item">
+      <div className="container" classID="AsciidoctorEditor" style={containerStyle}>
+        <div className="flex-item" style={flexItemStyle}>
           <a href="http://asciidoctor.org/docs/user-manual/" target="_blank">Asciidoctor User Manual</a>
           <h3>Input</h3>
           <textarea
             className="input"
+            style={inputStyle}
             onChange={this.handleChange}
             ref="textarea"
             defaultValue={this.state.value}/>
         </div>
 
-        <div className="flex-item" >
+        <div className="flex-item" style={flexItemStyle}>
           <h3>Output</h3>
           {/*<input*/}
             {/*type="button"*/}
@@ -88,7 +106,9 @@ task wrapper(type: Wrapper) {
         </div>
       </div>
     );
-  }
+  },
+
+
 });
 
 ReactDOM.render(<AsciidoctorEditor />, document.getElementById('container'));
