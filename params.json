@@ -1,0 +1,6 @@
+{
+  "name": "Asciidoctorrender",
+  "tagline": "This is a demo project for how to render asciidoctor using asciidoctor.js",
+  "body": "= Acsiidoctor Render\r\nGeng Jiawen\r\ntechinicalcute@Gmail.com\r\n:toc:\r\n:toclevels: 3\r\n:sectnums:\r\n:sectnumlevels: 2\r\n:source-highlighter: hightlightjs\r\n\r\nThis is a rendering app for realtime render asciidoctor to html\r\n\r\n== How to play\r\n[source]\r\nbower init\r\n\r\nopen asciidoctor.html in browser\r\n\r\n== Dependencies\r\n* asciidoctor.js\r\n* React\r\n* highlight.js\r\n* babel\r\n\r\n== Todo\r\n* add download button\r\n* add other common operation, like Bold and italic\r\n\r\n== License\r\nMIT\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
