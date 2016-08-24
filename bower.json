@@ -18,8 +18,8 @@
   "dependencies": {
     "asciidoctor.js": "^1.5.4",
     "jquery": "^3.1.0",
-    "react": "^15.3.0",
+    "react": "^15.3.1",
     "babel": "^5.8.38",
-    "highlightjs": "^9.5.0"
+    "highlightjs": "^9.6.0"
   }
 }
