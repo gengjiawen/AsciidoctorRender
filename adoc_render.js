@@ -39,11 +39,6 @@ task wrapper(type: Wrapper) {
     console.log("componentDidUpdate");
     this.highlightCode();
   },
-  saveToFile: function () {
-    console.log("save to file");
-    var html = ReactDOM.findDOMNode(this.refs.content).innerHTML;
-    console.log(html)
-  },
   highlightCode: function () {
     var domNode = ReactDOM.findDOMNode(this);
     var nodes = domNode.querySelectorAll('pre code');
