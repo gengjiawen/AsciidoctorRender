@@ -73,6 +73,7 @@ task wrapper(type: Wrapper) {
     var inputStyle = {
       flex: 1,
       width: '98%',
+      fontSize: 14,
     };
 
     return (
@@ -90,10 +91,6 @@ task wrapper(type: Wrapper) {
 
         <div className="flex-item" style={flexItemStyle}>
           <h3>Output</h3>
-          {/*<input*/}
-            {/*type="button"*/}
-            {/*value="Save"*/}
-            {/*onClick={this.saveToFile} />*/}
           <div
             ref="content"
             classID="content" dangerouslySetInnerHTML={this.rawMarkup()}>
