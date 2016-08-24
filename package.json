@@ -1,0 +1,33 @@
+{
+  "name": "asciidoctorrender",
+  "version": "1.0.0",
+  "description": "asciicdoctor dual panel realtime render",
+  "homepage": "https://github.com/gengjiawen/AsciidoctorRender#readme",
+  "main": "main.js",
+  "scripts": {
+    "sign-installer": "signcode ./out/windows-installer/ElectronAPIDemosSetup.exe --cert ~/electron-api-demos.p12 --prompt --name 'Electron API Demos' --url 'http://electron.atom.io'",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gengjiawen/AsciidoctorRender.git"
+  },
+  "keywords": [
+    "asciidoctor",
+    "render"
+  ],
+  "author": "Daniel Geng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gengjiawen/AsciidoctorRender/issues"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^1.3.4",
+    "signcode": "^0.4.0",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-electron": "^0.1.3"
+  }
+}
