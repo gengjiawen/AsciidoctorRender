@@ -39,11 +39,6 @@ task wrapper(type: Wrapper) {
     console.log("componentDidUpdate");
     this.highlightCode();
   },
-  saveToFile: function () {
-    console.log("save to file");
-    var html = ReactDOM.findDOMNode(this.refs.content).innerHTML;
-    console.log(html)
-  },
   highlightCode: function () {
     var domNode = ReactDOM.findDOMNode(this);
     var nodes = domNode.querySelectorAll('pre code');
@@ -78,6 +73,7 @@ task wrapper(type: Wrapper) {
     var inputStyle = {
       flex: 1,
       width: '98%',
+      fontSize: 14,
     };
 
     return (
@@ -95,10 +91,6 @@ task wrapper(type: Wrapper) {
 
         <div className="flex-item" style={flexItemStyle}>
           <h3>Output</h3>
-          {/*<input*/}
-            {/*type="button"*/}
-            {/*value="Save"*/}
-            {/*onClick={this.saveToFile} />*/}
           <div
             ref="content"
             classID="content" dangerouslySetInnerHTML={this.rawMarkup()}>
