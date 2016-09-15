@@ -7,11 +7,17 @@ techinicalcute@Gmail.com
 :sectnumlevels: 2
 :source-highlighter: hightlightjs
 
-This is a rendering app for realtime render asciidoctor to html
+This is a rendering app for realtime render asciidoctor to html.
+Include web implementation and electron implementation.
 
 == How to play
+=== For web
 [source]
 bower install
+
+=== For electron build
+Run **bower install** First.
+run **npm run package-all** or use electron builder, please see package.json scripts part.
 
 open asciidoctor.html in browser
 
@@ -25,10 +31,7 @@ open asciidoctor.html in browser
 * add download button
 * add other common operation, like Bold and italic
 
-== Build
-run **npm run package-all** or use electron builder, please see package.json scripts part.
-
-some links:
+== Build likns
 https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build
 
 == License

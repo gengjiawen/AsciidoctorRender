@@ -21,7 +21,7 @@ print("hello world")
 ----
 task wrapper(type: Wrapper) {
     group "wrapper"
-    gradleVersion = '2.14'
+    gradleVersion = '3.0'
     distributionUrl = distributionUrl.replace("bin", "all")
 }
 ----
