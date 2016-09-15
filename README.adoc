@@ -11,7 +11,7 @@ This is a rendering app for realtime render asciidoctor to html
 
 == How to play
 [source]
-bower init
+bower install
 
 open asciidoctor.html in browser
 
@@ -24,6 +24,12 @@ open asciidoctor.html in browser
 == Todo
 * add download button
 * add other common operation, like Bold and italic
+
+== Build
+run **npm run package-all** or use electron builder, please see package.json scripts part.
+
+some links:
+https://github.com/electron-userland/electron-builder/wiki/Multi-Platform-Build
 
 == License
 MIT
