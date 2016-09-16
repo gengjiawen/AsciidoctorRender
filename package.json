@@ -9,6 +9,7 @@
     "package-all": "electron-packager . --all",
     "postinstall": "install-app-deps",
     "pack": "build --dir",
+    "pack-all": "build -mwl",
     "dist": "build",
     "linux-deb": "build --linux deb",
     "test": "echo \"Error: no test specified\" && exit 1"
