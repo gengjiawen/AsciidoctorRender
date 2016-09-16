@@ -10,6 +10,8 @@ techinicalcute@Gmail.com
 This is a rendering app for realtime render asciidoctor to html.
 Include web implementation and electron implementation.
 
+image:https://travis-ci.org/gengjiawen/AsciidoctorRender.svg?branch=master["Build Status", link="https://travis-ci.org/gengjiawen/AsciidoctorRender"]
+
 == How to play
 === For web
 [source]
