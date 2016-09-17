@@ -27,6 +27,6 @@ deploy:
   file:
     - dist/asciidoctorrender-1.0.0-x86_64.AppImage
     - dist/mac/Asciidoctor Render-1.0.0.dmg
-    on:
-      tags: true
-      all_branches: true
+  on:
+    tags: true
+    all_branches: true
