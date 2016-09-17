@@ -20,13 +20,10 @@ osx_image: xcode7.3
 
 script: npm run pack-unix
 
-after_script: "ls -R dist"
-
-before_deploy: "ls -R dist"
-
 deploy:
   provider: releases
   api_key:
     secure: tZJ8SjI6HKTWBoJgGPO7MSxMYVhwBKZAlclvzRFv+hLw17y8nDsskVoNa8S8vW/md+3XYAQx+bQbcWmnBm78l4XFg7MXtQetWwTWc4W+Xz+zjNUScDVvK/z0nj8upqMqKC52AfDqij8f+r7wqVeDx8jyvP0XFS6EvEyCI+7IOp6zQawEV4UjEtXqAj/8v8TKjqcMqziiFO+HiJ+hL+wf9n2U4EVRTuUCjeF+CvkizGtl3Y1Z3MhxJag++oxwFVyLEgmDOW42PXJFSJfhCkP+Bv/HYV7CsUC2Hjtbx3tU8FuDSOShM27uCNEVLzlPnjshhCGGDy829TBiZ2cH/P3hWjPaHsCp7TZfQBNABbNF9eC3a2+7XxwsINYbhbspUG0dd5H2eNjmKukfIVbrA0CfxU/TRtHwV0kbcnu/lyFgNRuB8kZ9mCk0AYL1JwGdDvfuMoNuATZPO0r6fTiVDqUwUvXj6CLEz5hILrHm+4dzp1nk2gEIi3wB4nmbNOZdWJzQdLU8tvHDXEXosacjxXkjyCF55eKliA2UQvqBP29Gx5AY/gbhKNgaq0wbIblYBZwCx2De5cmmQBGJyUfV5eMq9+Xqdt8FzNPCSpkjaITgyXxS/4lIpR8DvjUicvNFfgca2vVA3ZtqYtlso4An0PDB0ebfzhxX2soZvwVLU+C1twM=
   file:
     - dist/asciidoctorrender-1.0.0-x86_64.AppImage
+    - dist/mac/Asciidoctor Render-1.0.0.dmg
