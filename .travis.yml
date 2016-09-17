@@ -19,7 +19,3 @@ before_install:
 osx_image: xcode7.3
 
 script: npm run pack-unix
-
-branches:
-  only:
-  - master
