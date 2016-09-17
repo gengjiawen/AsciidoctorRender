@@ -7,9 +7,9 @@
   "main": "main.js",
   "scripts": {
     "package-all": "electron-packager . --all",
-    "postinstall": "install-app-deps",
     "pack": "build --dir",
     "pack-all": "build -mwl",
+    "pack-unix": "build -ml",
     "dist": "build",
     "linux-deb": "build --linux deb",
     "test": "echo \"Error: no test specified\" && exit 1"
