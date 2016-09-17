@@ -29,4 +29,3 @@ deploy:
     - dist/mac/Asciidoctor Render-1.0.0.dmg
   on:
     tags: true
-    all_branches: true
