@@ -17,11 +17,12 @@ image:https://travis-ci.org/gengjiawen/AsciidoctorRender.svg?branch=master["Buil
 [source]
 bower install
 
+open asciidoctor.html in browser
+
 === For electron build
 Run **bower install** First.
-run **npm run package-all** or use electron builder, please see package.json scripts part.
+run **npm run package-all** or use electron builder, please see package.json scripts part for detail.
 
-open asciidoctor.html in browser
 
 == Dependencies
 * asciidoctor.js
